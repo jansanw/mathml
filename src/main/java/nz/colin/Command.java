@@ -38,7 +38,7 @@ public class Command {
                             System.out.println(filename + "\n" + mml);
                         } catch (Exception e) {
                             // skip error
-                            System.out.println(e);
+                            // System.out.println(e);
                         }
                     }
                 }
