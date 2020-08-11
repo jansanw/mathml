@@ -33,8 +33,13 @@ public class Command {
                 for (File subFile : listFiles) {
                     String filename = subFile.toString();
                     if (!subFile.isDirectory() && filename.endsWith(".bin")) {
-                        String mml = mathtype2MML(filename);
-                        System.out.println(filename + "\n" + mml);
+                        try {
+                            String mml = mathtype2MML(filename);
+                            System.out.println(filename + "\n" + mml);
+                        } catch (Exception e) {
+                            // skip error
+                            System.out.println(e);
+                        }
                     }
                 }
 
